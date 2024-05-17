@@ -3,7 +3,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Admin\\Projphp\\": "src/"
+            "App\\": "src/"
         }
     },
     "require": {}

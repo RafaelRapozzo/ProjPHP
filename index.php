@@ -8,7 +8,7 @@
 <body>
     <h1>To Do List</h1>
     <?php   
-        echo " PAPAPAPP";
+        include 'src/main.php';
     ?>
     
 </body>
