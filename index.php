@@ -10,6 +10,28 @@
     <?php   
         include 'src/main.php';
     ?>
-    
+<label for="email">Email</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password"><br>
+    <button id="login" onclick="registrarUsuario" >Login</button>
+
+    <script>
+        let registrarUsuario = ()=> {
+            let email = domcument.getElementByid(email).value;
+            let password = document.getElementById(password).value;
+            firebase.auth().createUserWithEmailAndPassword(email,password)
+            .then((userCredential) => {
+                var user = userCredential.user;
+                console.log(user);
+            });
+            .catch( (error) => {
+                var errorCode = errror.code;
+                var errorMessage = error.message;
+                console,log(errorMessage);
+
+            });
+        });
+    </script>
 </body>
 </html>
